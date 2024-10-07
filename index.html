@@ -18,47 +18,21 @@
             color: #333;
             line-height: 1.6;
         }
+
         header {
-    display: flex;
-    justify-content: space-between; /* Para pantallas grandes */
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #fff;
-    border-bottom: 2px solid #eee;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 2px solid #eee;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-.auth-links {
-    margin-left: 20px; /* Espacio a la izquierda */
-}
-
-/* Media Queries */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
-        align-items: center; /* Centrar elementos */
-        text-align: center; /* Centrar texto */
-    }
-
-    .logo {
-        margin-bottom: 10px; /* Espacio entre logo y botón */
-    }
-
-    .auth-links {
-        margin-top: 10px; /* Espacio superior para separar del título */
-    }
-
-    .auth-links a {
-        font-size: 1rem; /* Ajustar tamaño de fuente si es necesario */
-        padding: 10px 20px; /* Ajustar el padding para que se vea mejor */
-        border-radius: 25px; /* Hacer el botón más redondeado */
-    }
-
-                .logo {
+        .logo {
             display: flex;
             align-items: center;
         }
@@ -418,4 +392,5 @@
     </script>
 </body>
 </html>
+
 
