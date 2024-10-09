@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de laptops</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-search {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Encuentra la laptop perfecta para tí</h2>
+        <form>
+            <div class="form-group">
+                <label for="laptopBrand">Marca</label>
+                <select class="form-control" id="laptopBrand">
+                    <option value="">Selecciona una marca</option>
+                    <option value="dell">Dell</option>
+                    <option value="hp">HP</option>
+                    <option value="apple">Apple</option>
+                    <option value="lenovo">Lenovo</option>
+                    <option value="asus">Asus</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="screenSize">Tamaño de pantalla</label>
+                <select class="form-control" id="screenSize">
+                    <option value="">Selecciona el tamaño de pantalla</option>
+                    <option value="13">13 inches</option>
+                    <option value="15">15 inches</option>
+                    <option value="17">17 inches</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="processor">Procesador</label>
+                <select class="form-control" id="processor">
+                    <option value="">Selecciona un procesador</option>
+                    <option value="i5">Intel Core i5</option>
+                    <option value="i7">Intel Core i7</option>
+                    <option value="i9">Intel Core i9</option>
+                    <option value="amd">AMD Ryzen</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ram">RAM</label>
+                <input type="number" class="form-control" id="ram" placeholder="Ingresa la RAM en GygaBytes">
+            </div>
+
+            <div class="form-group">
+                <label for="storage">Tipo de almacenamiento</label>
+                <select class="form-control" id="storage">
+                    <option value="">Selecciona tipo de almacenamiento</option>
+                    <option value="ssd">SSD</option>
+                    <option value="hdd">HDD</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="priceRangeLaptop">Rango de precio (presupuesto) </label>
+                <input type="text" class="form-control" id="priceRangeLaptop" placeholder="e.g., $500 - $1500">
+            </div>
+
+            <button type="submit" class="btn btn-search btn-block">Busca tu laptop</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
