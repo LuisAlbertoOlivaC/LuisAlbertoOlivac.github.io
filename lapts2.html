@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Interactivo Mejorado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #6DD5FA, #2980B9);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            transition: transform 0.3s ease;
+        }
+
+        .form-container:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2980B9;
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        select, input[type="range"], input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus, input[type="range"]:focus, input[type="submit"]:focus {
+            border-color: #2980B9;
+        }
+
+        .subcategoria {
+            display: none;
+        }
+
+        input[type="submit"] {
+            background-color: #2980B9;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1C5980;
+        }
+
+        input[type="range"] {
+            height: 8px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background-color: #2980B9;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background-color: #1C5980;
+        }
+
+        .presupuesto-value {
+            font-weight: bold;
+            color: #2980B9;
+            text-align: center;
+            margin-top: -5px;
+        }
+
+        .info-text {
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function mostrarOpciones() {
+            document.getElementById("subcategoria-juegos").style.display = "none";
+            document.getElementById("subcategoria-diseno").style.display = "none";
+            document.getElementById("subcategoria-programacion").style.display = "none";
+            
+            var categoria = document.getElementById("categoria").value;
+            
+            if (categoria === "juegos") {
+                document.getElementById("subcategoria-juegos").style.display = "block";
+            } else if (categoria === "diseno") {
+                document.getElementById("subcategoria-diseno").style.display = "block";
+            } else if (categoria === "programacion") {
+                document.getElementById("subcategoria-programacion").style.display = "block";
+            }
+        }
+
+        function actualizarPresupuesto(valor) {
+            document.getElementById("presupuesto-value").textContent = "$" + valor + " MXN";
+        }
+    </script>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Elige tus preferencias</h2>
+    <form action="#" method="post">
+        <label for="categoria">Selecciona un propósito de uso:</label>
+        <select id="categoria" name="categoria" onchange="mostrarOpciones()">
+            <option value="">--Selecciona una opción--</option>
+            <option value="juegos">Juegos</option>
+            <option value="diseno">Diseño</option>
+            <option value="tareas_basicas">Tareas Básicas</option>
+            <option value="programacion">Programación</option>
+        </select>
+
+        <!-- Subcategoría Juegos -->
+        <div id="subcategoria-juegos" class="subcategoria">
+            <label for="tipo-juego">Selecciona el tipo de juego:</label>
+            <select id="tipo-juego" name="tipo-juego">
+                <option value="exigentes">Exigentes</option>
+                <option value="poco_exigentes">Poco exigentes</option>
+                <option value="muy_exigentes">Muy exigentes</option>
+            </select>
+        </div>
+
+        <!-- Subcategoría Diseño -->
+        <div id="subcategoria-diseno" class="subcategoria">
+            <label for="tipo-diseno">Selecciona el tipo de diseño:</label>
+            <select id="tipo-diseno" name="tipo-diseno">
+                <option value="3d">3D</option>
+                <option value="2d">Imágenes 2D</option>
+            </select>
+        </div>
+
+        <!-- Subcategoría Programación -->
+        <div id="subcategoria-programacion" class="subcategoria">
+            <label for="nivel-programacion">Selecciona el nivel de programación:</label>
+            <select id="nivel-programacion" name="nivel-programacion">
+                <option value="basico">Básico</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="experto">Experto</option>
+            </select>
+        </div>
+
+        <label for="marca">Marca preferida (opcional):</label>
+        <select id="marca" name="marca">
+            <option value="">--Selecciona una opción--</option>
+            <option value="acer">Acer</option>
+            <option value="hp">HP</option>
+            <option value="dell">Dell</option>
+            <option value="lenovo">Lenovo</option>
+            <option value="apple">Apple</option>
+        </select>
+        
+        <label for="pantalla">Selecciona el tamaño de pantalla:</label>
+        <select id="pantalla" name="pantalla">
+            <option value="">--Selecciona una opción--</option>
+            <option value="pantalla_grande">Pantalla grande</option>
+            <option value="pantalla_media">Pantalla mediana</option>
+            <option value="pantalla_chica">Pantalla chica</option>
+            <option value="la_que_sea">No importa</option>
+        </select>
+
+        <label for="Almacenamiento">Selecciona el almacenamiento total (opcional):</label>
+        <select id="almacenamiento" name="almacenamiento">
+            <option value="">--Selecciona una opción--</option>
+            <option value="poco">Poco (menos de 256GB)</option>
+            <option value="medio">Estándar (de 256 a 512GB)</option>
+            <option value="mucho">Amplio (Más de 512GB)</option>
+            <option value="el_que_sea">No importa</option>
+        </select>
+
+        <label for="presupuesto">Presupuesto (MXN):</label>
+        <input type="range" id="presupuesto" name="presupuesto" min="3500" max="120000" step="1000" value="3500" oninput="actualizarPresupuesto(this.value)">
+        <p class="presupuesto-value" id="presupuesto-value">$3500 MXN</p>
+
+        <p class="info-text">Por favor, selecciona un presupuesto adecuado a tus necesidades.</p>
+
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+</body>
+</html>
