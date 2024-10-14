@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        main {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .result-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .result-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .result-card h2 {
+            margin-top: 0;
+            color: #4a90e2;
+            font-size: 1.8rem;
+        }
+
+        .result-card p {
+            margin: 10px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .result-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4a90e2;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .badge {
+            background-color: #f39c12;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Resultados de búsqueda</h1>
+    </header>
+
+    <main>
+        <div class="results-container">
+            <div class="result-card">
+                <img src="s21.jpg" alt="Imagen del Producto 1">
+                <div class="badge">Mejor Cámara</div>
+                <h2>Samsung Galaxy S21</h2>
+                <p>Smartphone de última generación con pantalla AMOLED de 6.2 pulgadas, triple cámara y rendimiento potente. Ideal para inexpertos en tecnología gracias a su interfaz intuitiva.</p>
+            </div>
+
+            <div class="result-card">
+                <img src="iph.jpg" alt="Imagen del Producto 2">
+                <div class="badge">Popular</div>
+                <h2>iPhone 13</h2>
+                <p>El iPhone 13 cuenta con el chip A15 Bionic para un rendimiento increíble y una cámara dual de alta calidad. Sencillo de usar, con un ecosistema robusto y familiar.</p>
+            </div>
+
+            <div class="result-card">
+                <img src="redmi.jpg" alt="Imagen del Producto 3">
+                <div class="badge">Buena Relación Calidad-Precio</div>
+                <h2>Xiaomi Redmi Note 10</h2>
+                <p>Un celular económico pero con excelentes prestaciones: pantalla AMOLED de 6.43 pulgadas, batería de larga duración y cámara cuádruple. Perfecto para quienes buscan calidad a buen precio.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Explora productos seleccionados con facilidad y confianza</p>
+    </footer>
+
+</body>
+</html>

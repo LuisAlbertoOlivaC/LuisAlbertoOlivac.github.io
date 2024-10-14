@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        main {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .result-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .result-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .result-card h2 {
+            margin-top: 0;
+            color: #4a90e2;
+            font-size: 1.8rem;
+        }
+
+        .result-card p {
+            margin: 10px 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .result-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4a90e2;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .badge {
+            background-color: #f39c12;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Resultados de búsqueda</h1>
+    </header>
+
+    <main>
+        <div class="results-container">
+            <div class="result-card">
+                <img src="shopping (1).jpg" alt="Imagen del Producto 1">
+                <div class="badge">Mejor para estudiantes</div>
+                <h2>Laptop HP Pavilion 15</h2>
+                <p>Una laptop perfecta para estudiantes y profesionales que buscan un equipo potente, con diseño elegante y fácil de usar. Procesador Intel Core i7, 16GB de RAM y 512GB SSD.</p>
+            </div>
+
+            <div class="result-card">
+                <img src="111883_macbookair.jpg" alt="Imagen del Producto 2">
+                <div class="badge">Alta Gama</div>
+                <h2>MacBook Air M1</h2>
+                <p>La MacBook Air con chip M1 redefine la velocidad y el rendimiento, ideal para usuarios que prefieren un sistema operativo simple y eficiente. Pantalla Retina de 13 pulgadas, 8GB de RAM.</p>
+            </div>
+
+            <div class="result-card">
+                <img src="718xppXjTBL._AC_UF894,1000_QL80_.jpg" alt="Imagen del Producto 3">
+                <div class="badge">Mejor Precio</div>
+                <h2>Dell Inspiron 14</h2>
+                <p>Esta laptop combina rendimiento y precio accesible, ideal para tareas cotidianas y trabajo de oficina. Procesador Intel Core i5, 8GB de RAM y 256GB SSD.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Explora productos seleccionados con facilidad y confianza</p>
+    </footer>
+
+</body>
+</html>
